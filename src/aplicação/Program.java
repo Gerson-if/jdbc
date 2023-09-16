@@ -7,22 +7,42 @@ import bancoDeDados.FabricaConexao;
 import serviços.NovaPessoa;
 import java.sql.Connection;
 import java.sql.SQLException;
-import serviços.GerarListaDePessoas;
+import serviços.ConsultarPessoas;
 
 public class Program {
     
-    public static void main(String[] args) throws SQLException {
+    public static void main(String[] args) {
         
+        try{
         CriarBanco banco = new CriarBanco();
         FabricaConexao f = new FabricaConexao();
         CriarTabelaPessoas p = new CriarTabelaPessoas();
         NovaPessoa n = new NovaPessoa();
-        GerarListaDePessoas g = new GerarListaDePessoas();
+        ConsultarPessoas c = new ConsultarPessoas();
+        
        
-        //banco.CriarBanco();
-        //p.CriarTabela();
-       // n.cadastrarPessoa();
-        g.gerarLista();
+        banco.CriarBanco();
+        p.CriarTabela();
+        n.cadastrarPessoa();
+        c.consultarPessoas();
+        
+        }
+        catch(SQLException e){
+            System.out.println("erro ao executar programa");
+            throw new RuntimeException(e);
+        }
+        finally{
+            try {
+                
+            } catch (Exception e) {
+                System.out.println("erro ao desalocar recursos");
+                e.printStackTrace();
+            }
+        
+        
+        }
+        
+        
        
         
         
