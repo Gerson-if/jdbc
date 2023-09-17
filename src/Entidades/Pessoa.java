@@ -10,6 +10,10 @@ public class Pessoa {
         this.codigo = codigo;
         this.nome = nome;
     }
+    public Pessoa(String pesquisaName){
+      this.setNome(pesquisaName);
+    
+    }
 
      
     

@@ -8,14 +8,13 @@ import java.util.Scanner;
 
 public class NovaPessoa {
 
-    public void cadastrarPessoa() {
+    public void cadastrarPessoa( String nome, int codigo) {
         Scanner sc = new Scanner(System.in);
 
         try {
-            System.out.print("Informe um nome: ");
-            String name = sc.nextLine();
-            System.out.print("Informe um número: ");
-            int numero = sc.nextInt();
+            
+            String name = nome;
+            int numero = codigo;
 
             Connection conexao = FabricaConexao.getConnection(); // criamos uma nova conection com o db
 
