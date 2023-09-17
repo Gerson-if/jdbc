@@ -12,7 +12,7 @@ import Entidades.Pessoa;
 
 
 
-public class ConsultarPessoa2 {
+public class PesquisarPessoa {
      private PreparedStatement stmt = null;
      private Connection conexao = null;
      private ResultSet resultado = null;

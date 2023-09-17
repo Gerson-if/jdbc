@@ -10,7 +10,7 @@ import serviços.ConsultarPessoas;
 import serviços.NovaPessoa;
 import java.sql.Connection;
 import java.util.InputMismatchException;
-import serviços.ConsultarPessoa2;
+import serviços.PesquisarPessoa;
 
 public class Menu {
     // atributos 
@@ -24,7 +24,7 @@ public class Menu {
             CriarTabelaPessoas p = new CriarTabelaPessoas();
             NovaPessoa n = new NovaPessoa();
             ConsultarPessoas c = new ConsultarPessoas();
-            ConsultarPessoa2 c2 = new ConsultarPessoa2();
+            PesquisarPessoa c2 = new PesquisarPessoa();
             
 
             int valor = 0;
@@ -37,9 +37,9 @@ public class Menu {
                 System.out.println(" 1 CRIAR BANCO DE DADOS ");
                 System.out.println(" 2 CRIAR NOVA TABELA ");
                 System.out.println(" 3 CADASTRAR PESSOA ");
-                System.out.println(" 4 CONSULTAR TABELA ");
+                System.out.println(" 4 LISTAR TODAS AS PESSOAS ");
                 System.out.println(" 5 PESQUISAR PESSOA");
-                System.out.println(" 6 REMOVER PESSOAS ");
+                System.out.println(" 6 EDITAR PESSOAS ");
                 System.out.println(" 7 SAIR ");
                 System.out.print("OQUE DESEJA FAZER ? : ");
                 valor = sc.nextInt();

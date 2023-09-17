@@ -9,7 +9,6 @@ import java.util.Scanner;
 public class NovaPessoa {
 
     public void cadastrarPessoa( String nome, int codigo) {
-        Scanner sc = new Scanner(System.in);
 
         try {
             
@@ -31,8 +30,6 @@ public class NovaPessoa {
             System.out.println("Erro ao inserir pessoa: " + e.getMessage());
             throw new RuntimeException(e);
 
-        } finally {
-            sc.close();
         }
     }
 }
